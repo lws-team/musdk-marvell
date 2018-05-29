@@ -38,9 +38,9 @@ static struct uio_info_t *__uio_info_byname(char* name, const char *filter_name)
 {
 	struct uio_info_t *info;
 	char linebuf[UIO_MAX_NAME_SIZE];
-	char filename[64];
+	char filename[276];
 
-	snprintf(filename, sizeof(filename), "/sys/class/uio/%s/name", name);
+	snprintf(filename, sizeof(filename) - 1, "/sys/class/uio/%s/name", name);
 	if (__uio_line_from_file(filename, linebuf))
 		return NULL;
 
