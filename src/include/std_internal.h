@@ -46,7 +46,6 @@
 #include <limits.h>
 #include <pthread.h>
 #include <sys/mman.h>
-#include <stropts.h>
 #include <unistd.h>
 #include <assert.h>
 #include <netinet/in.h>
