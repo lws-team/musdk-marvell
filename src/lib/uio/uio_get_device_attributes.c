@@ -68,6 +68,7 @@ int uio_get_device_attributes(struct uio_info_t* info)
 		if (!attr)
 			return -1;
 		strncpy(attr->name, namelist[n]->d_name, UIO_MAX_NAME_SIZE);
+		attr->name[UIO_MAX_NAME_SIZE - 1] = '\0';
 		free(namelist[n]);
 		if (__uio_line_from_file(fullname, attr->value)) {
 			kfree(attr);
