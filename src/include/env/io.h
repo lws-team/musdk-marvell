@@ -105,7 +105,7 @@ static inline void __raw_mv_writew(u16 val, volatile void __iomem *addr)
 
 static inline void __raw_mv_writel(u32 val, volatile void __iomem *addr)
 {
-	asm volatile("str %w0, [%1]" : : "r" (val), "r" (addr));
+	asm volatile("str %w0,[%1,0]" : : "r" (val), "r" (addr));
 }
 
 static inline void __raw_mv_writeq(u64 val, volatile void __iomem *addr)
