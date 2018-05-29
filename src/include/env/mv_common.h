@@ -165,7 +165,7 @@
 /*
  * deal with unrepresentable constant logarithms
  */
-extern __attribute__((const, noreturn))
+extern __attribute__((noreturn))
 int __ilog2_undef(void);
 
 /**
