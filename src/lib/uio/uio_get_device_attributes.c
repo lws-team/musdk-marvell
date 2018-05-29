@@ -48,7 +48,7 @@ int uio_get_device_attributes(struct uio_info_t* info)
 {
 	struct dirent **namelist;
 	struct uio_dev_attr_t *attr, *last = NULL;
-	char fullname[96];
+	char fullname[294];
 	int n;
 
 	info->dev_attrs = NULL;
